@@ -10,19 +10,19 @@
     {
       noun:[
         {
-          img:"/imgs/noun-elephant.png",
+          img:"imgs/noun-elephant.png",
           text:"elephant"
         },
         {
-          img:"/imgs/noun-dishwasher.png",
+          img:"imgs/noun-dishwasher.png",
           text:"dishwasher"
         },
         {
-          img:"/imgs/noun-buttercup.png",
+          img:"imgs/noun-buttercup.png",
           text:"buttercup"
         },
         {
-          img:"/imgs/noun-lysol.png",
+          img:"imgs/noun-lysol.png",
           text:"lysol"
         }
       ]
@@ -30,19 +30,19 @@
     {
       adj:[
         {
-          img:"/imgs/adj-exhausted.png",
+          img:"imgs/adj-exhausted.png",
           text:"exhausted"
         },
         {
-          img:"/imgs/adj-raging.png",
+          img:"imgs/adj-raging.png",
           text:"raging"
         },
         {
-          img:"/imgs/adj-thirsty.png",
+          img:"imgs/adj-thirsty.png",
           text:"thirsty"
         },
         {
-          img:"/imgs/adj-frisky.png",
+          img:"imgs/adj-frisky.png",
           text:"frisky"
         }
       ]
@@ -50,19 +50,19 @@
     {
       verb:[
         {
-          img:"/imgs/verb-fly.png",
+          img:"imgs/verb-fly.png",
           text:"fly"
         },
         {
-          img:"/imgs/verb-kick.png",
+          img:"imgs/verb-kick.png",
           text:"kick"
         },
         {
-          img:"/imgs/verb-paint.png",
+          img:"imgs/verb-paint.png",
           text:"paint"
         },
         {
-          img:"/imgs/verb-whistle.png",
+          img:"imgs/verb-whistle.png",
           text:"whistle"
         }
       ]
