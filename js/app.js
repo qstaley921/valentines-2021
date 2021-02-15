@@ -115,7 +115,6 @@
 // =================================
 
   const changeMainPosition = (width, height) => {
-    console.log('i am on');
     const mainHeight = mainNode.offsetHeight;
     const mainWidth = mainNode.offsetWidth;
     const fromLeft = (width - mainWidth) / 2;

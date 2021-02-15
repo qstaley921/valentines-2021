@@ -122,7 +122,6 @@ class Game {
     const quizNode = document.querySelectorAll('figure');
     this.answers[`${answerProp}`] = quizNode;
     this.active = answerProp;
-    console.log(quizNode);
     target.className = 'answer-btn active';
     target.previousElementSibling.className = '';
   }
