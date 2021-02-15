@@ -119,7 +119,7 @@
     const mainHeight = mainNode.offsetHeight;
     const mainWidth = mainNode.offsetWidth;
     const fromLeft = (width - mainWidth) / 2;
-    const fromTop = (height - mainHeight) / 2;
+    const fromTop = (height - mainHeight) / 4;
     mainNode.style.left = `${fromLeft}px`;
     mainNode.style.top = `${fromTop}px`;
   }
