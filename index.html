@@ -32,38 +32,19 @@
     </header>
 
     <div class="quiz">
-      <figure>
-        <img src="imgs/noun-elephant.png" alt="elephant">
-        <button>Elephant</button>
-      </figure>
-
-      <figure>
-        <img src="imgs/noun-elephant.png" alt="elephant">
-        <button>Elephant</button>
-      </figure>
-
-      <figure>
-        <img src="imgs/noun-elephant.png" alt="elephant">
-        <button>Elephant</button>
-      </figure>
-
-      <figure>
-        <img src="imgs/noun-elephant.png" alt="elephant">
-        <button>Elephant</button>
-      </figure>
-
+      <!-- Created in Game.js -->
     </div>
 
     <div id="progress-bar">
-      <span class="p-icon p-visited">noun</span>
-      <span class="p-icon p-active">adj</span>
-      <span class="p-icon">verb</span>
-      <span class="p-icon">poem</span>
+      <button id="noun-btn" data-complete="false" class="p-icon p-active">noun</button>
+      <button id="adj-btn" data-complete="false" class="p-icon disabled">adj</button>
+      <button id="verb-btn" data-complete="false" class="p-icon">verb</button>
+      <button id="poem-btn" data-complete="false" class="p-icon">poem</button>
     </div>
   </main>
 
-  <script type="text/json" src="data.json"></script>
-  <script type="application/javascript" src="app.js"></script>
+  <script src="js/Game.js"></script>
+  <script type="application/javascript" src="js/app.js"></script>
 </body>
 
 </html>
