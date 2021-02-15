@@ -63,6 +63,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 243, 223, 1);
+  overflow: hidden;
 }
 
 main {
@@ -233,5 +234,17 @@ figure img {
 
   h1 {
     font-size: 28px;
+  }
+}
+
+@media (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
