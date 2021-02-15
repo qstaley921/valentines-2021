@@ -6,6 +6,7 @@
   const svgDivNode = document.querySelector('.svg-box');
   const mainNode = document.querySelector('main');
   const navBtns = document.querySelectorAll('.p-icon');
+  const warningNode = document.querySelector('.warning');
   const data = [
     {
       noun:[
@@ -105,6 +106,11 @@
    * Updates SVG on page resize
    */
   window.addEventListener('resize', () => {
+    if (getWindowSize().height < 580) {
+      warningNode.style.display = 'flex';
+    } else {
+      warningNode.style.display = 'none';
+    }
     genSVG(getWindowSize().width, getWindowSize().height);
     changeMainPosition(getWindowSize().width, getWindowSize().height);
   });
@@ -134,6 +140,11 @@
  * Creates a Game Object on page load
  */
 window.addEventListener('DOMContentLoaded', () => {
+  if (getWindowSize().height < 580) {
+    warningNode.style.display = 'flex';
+  } else {
+    warningNode.style.display = 'none';
+  }
   changeMainPosition(getWindowSize().width, getWindowSize().height);
   game.genQuiz('noun');
 
