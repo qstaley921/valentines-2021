@@ -72,7 +72,7 @@
 // ========================================================= END GLOBAL VARIABLES
 
 // =================================
-//      SVG FUNCTIONS
+//      SVG FUNCTIONS / Positioning
 // =================================
 
   /**
@@ -106,14 +106,23 @@
    */
   window.addEventListener('resize', () => {
     genSVG(getWindowSize().width, getWindowSize().height);
+    changeMainPosition(getWindowSize().width, getWindowSize().height);
   });
 // ========================================================= END SVG
 
 // =================================
-//      LOGIC HANDLERS
+//      Style HANDLERS
 // =================================
 
-  
+  const changeMainPosition = (width, height) => {
+    console.log('i am on');
+    const mainHeight = mainNode.offsetHeight;
+    const mainWidth = mainNode.offsetWidth;
+    const fromLeft = (width - mainWidth) / 2;
+    const fromTop = (height - mainHeight) / 2;
+    mainNode.style.left = `${fromLeft}px`;
+    mainNode.style.top = `${fromTop}px`;
+  }
   
 
 // ========================================================= END LOGIC
@@ -126,6 +135,7 @@
  * Creates a Game Object on page load
  */
 window.addEventListener('DOMContentLoaded', () => {
+  changeMainPosition(getWindowSize().width, getWindowSize().height);
   game.genQuiz('noun');
 
   // Disables buttons from the start

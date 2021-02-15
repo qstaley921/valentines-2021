@@ -4,6 +4,9 @@ class Game {
     this.data = data;
     this.answers = {noun: [], adj: [], verb: []};
     this.active = '';
+    this.noun = '';
+    this.verb = '';
+    this.adj = '';
   }
 
   /**
@@ -12,6 +15,7 @@ class Game {
    */
   genQuiz(quiz) {
     const quizNode = document.querySelector('.quiz');
+    quizNode.className = 'quiz';
     const quizData = this.data.filter(index => index.hasOwnProperty(quiz));
     const quizObj = quizData[0][quiz];
     let quizHTML = '';
@@ -31,6 +35,28 @@ class Game {
       quizNode.innerHTML = '';
       nodeArray.forEach(node => quizNode.appendChild(node));
     }
+  }
+
+  genPoem() {
+    const quizNode = document.querySelector('.quiz');
+    this.getAnswer('noun');
+    this.getAnswer('adj');
+    this.getAnswer('verb');
+    quizNode.className = 'quiz poem-box';
+    quizNode.innerHTML = `
+      <span class="hr"></span>
+      <p class="poem"><span class="title-text">Vrinda,</span><br> admittedly, I was a wee worried you'd pick the ${this.adj} ${this.noun}&mdash;especially since you think they can ${this.verb}. And now ... here we are; my worries came true! The ${this.noun} cannot ${this.verb}, and yet, you have selected this ${this.adj} absurdity, all-the-same&mdash;a true testament to our chaotic world. Speaking of chaos, this ${this.adj} little valentine is completely coded from scratch, for you, for this 2021 Valentine's day. May all this inspire you to ${this.verb}, ${this.verb} away. From your ${this.adj} ${this.noun} of a friend, <br><span class="title-text sig">Quentin.</span> </p>
+
+    `;
+  }
+
+  getAnswer(property) {
+    this.answers[`${property}`].forEach(figure => {
+      if (figure.childNodes[3].classList.contains('active')) {
+        const text = figure.childNodes[3].innerHTML;
+        this[`${property}`] = text;
+      }
+    });
   }
 
   /**
@@ -60,9 +86,12 @@ class Game {
     if (target.getAttribute('data-complete') === 'false') {
       target.className = 'p-icon p-active';
     }
-
-    this.genQuiz(target.innerHTML);
   
+    if (target.innerHTML === 'poem') {
+      this.genPoem();
+    } else {
+      this.genQuiz(target.innerHTML);
+    }
   }
 
   handleNavChange(btns) {
