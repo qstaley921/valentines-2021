@@ -17,19 +17,9 @@
 </head>
 
 <body>
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 786 1376">
-    <defs>
-      <style>  
-        .cls-1{fill:#fff3df;}.cls-2{fill:#181c26;}.cls-3{fill:#f2c9bb;}.cls-4{fill:#d9a9c8;}.cls-5{fill:#8c7288;}
-      </style>
-    </defs>
-    <rect class="cls-1" width="786" height="1376"/>
-    <polygon class="cls-2" points="212.7 144 104.7 144 0 75.5 0 75.4 6.6 76.5 6.6 76.5 212.7 144"/>
-    <polygon class="cls-3" points="0 75.4 108 144 216 144 0 75.4"/>
-    <polygon class="cls-4" points="0 75.4 216 144 216 137.1 0 75.4"/>
-    <polygon class="cls-5" points="0 75.4 216 137.1 216 111.8 0 75.4"/>
-  </svg>
+  <div class="svg-box">
+    <!-- Javascript SVG goes here -->
+  </div>
 
   <main>
     <header>
@@ -38,38 +28,42 @@
         <img id="logo" src="/imgs/logo.svg" alt="A Letter 'V' Logo">
         <h1 id="valentine-title">Valentine</h1>
       </div>
-      <p id="description">To my loving valentine, may you pick yourself some parts of speech and I <br>will make your words so sweet!</p>
+      <p id="description">To my loving valentine, may you pick yourself some parts of speech and I will make your picks a treat!</p>
     </header>
 
     <div class="quiz">
       <figure>
-        <img src="/imgs/elephant.jpg" alt="elephant">
+        <img src="/imgs/noun-elephant.png" alt="elephant">
         <button>Elephant</button>
       </figure>
 
       <figure>
-        <img src="/imgs/elephant.jpg" alt="elephant">
+        <img src="/imgs/noun-elephant.png" alt="elephant">
         <button>Elephant</button>
       </figure>
 
       <figure>
-        <img src="/imgs/elephant.jpg" alt="elephant">
+        <img src="/imgs/noun-elephant.png" alt="elephant">
         <button>Elephant</button>
       </figure>
 
       <figure>
-        <img src="/imgs/elephant.jpg" alt="elephant">
+        <img src="/imgs/noun-elephant.png" alt="elephant">
         <button>Elephant</button>
       </figure>
 
     </div>
+
+    <div id="progress-bar">
+      <span class="p-icon p-visited">noun</span>
+      <span class="p-icon p-active">adj</span>
+      <span class="p-icon">verb</span>
+      <span class="p-icon">poem</span>
+    </div>
   </main>
-  <footer>
-    <h2 id="progress-title"></h2>
-    <p id="progress-text"></p>
-    <span id="progress-bar"></span>
-  </footer>
-  <script src="index.js"></script>
+
+  <script type="text/json" src="data.json"></script>
+  <script type="application/javascript" src="app.js"></script>
 </body>
 
 </html>
